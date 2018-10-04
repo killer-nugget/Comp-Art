@@ -4,6 +4,7 @@ var xSq = 0;
 var ySq = 0;
 
 function setup() {
+  pixelDensity(1);
   createCanvas(windowWidth,windowHeight);
   background(51);
 }
