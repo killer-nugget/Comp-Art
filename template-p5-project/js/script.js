@@ -4,7 +4,7 @@ var xSq = 0;
 var ySq = 0;
 
 function setup() {
-  createCanvas(500,500);
+  createCanvas(windowWidth,windowHeight);
   background(51);
 }
 
