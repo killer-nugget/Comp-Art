@@ -8,6 +8,7 @@ var x=0;
 
 
 function setup() {
+  pixelDensity(1);
   createCanvas(1000,500);
   background(51);
   noStroke();
