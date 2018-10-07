@@ -2,7 +2,7 @@ var xL=15;
 var yL=30;
 
 function setup() {
-  createCanvas(5,532);
+  createCanvas(540,532);
   background(0);
 }
 
