@@ -10,14 +10,15 @@ function setup(){
 function draw(){
   squares = new Square (random(50,250));
 
-  if (keyIsDown(UP_ARROW)){
-  saveCanvas(c,"juste","jpg");
-}
-  else{
-  return false;
-  }
 }
 
 function mousePressed(){
   squares.display();
+}
+
+function keyPressed(){
+  if (keyCode === UP_ARROW){
+    console.log('down pressed');
+    saveCanvas(c,"toile","jpg");
+  }
 }
