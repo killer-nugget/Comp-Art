@@ -1,30 +1,26 @@
-var x=0;
-var y=0;
-var xSq = 0;
-var ySq = 0;
+var yRotate=0;
+// Pippin had 3 different rotations
+// for each planet.
 
-function setup() {
-  pixelDensity(1);
-  createCanvas(windowWidth,windowHeight);
-  background(51);
+function setup(){
+  createCanvas(500,500,WEBGL);
+
 }
 
-function draw() {
-var sqW=5;
-var sqH=sqW;
+function draw(){
+  background(0);
+  rotateY(yRotate*0.5);
+  fill(255,255,0);
+  box(100);
+  translate(150,10,0)
+  rotateY(yRotate);
+  fill(0,0,255);
+  box(50);
+  translate(70,10,0);
+  rotateY(yRotate*2);
+  fill(150,150,150);
+  box(25);
 
-while(xSq<width){
-rect(xSq,ySq,sqW,sqH);
-xSq+=sqW;
-  }
-
-  xSq=0;
-  ySq+=sqH;
-
-while(ySq<height && xSq<width){
-  console.log('nextline');
-  rect(xSq,ySq,sqW,sqH);
-  xSq+=sqW;
-}
+  yRotate+=radians(1);
 
 }
