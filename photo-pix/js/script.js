@@ -1,30 +1,28 @@
-function setup(){
+var self;
 
+function preload(){
+  self = loadImage('assets/images/self.png');
+}
+
+function setup(){
   pixelDensity(1);
-  var c= createCanvas (1000,800);
-  c
+  createCanvas (1000,800);
   background (0);
 
-  loadPixels();
+  self.loadPixels();
 
-    for ( var y = 0 ; y < height ; y++ ){
-      for ( var x = 0 ; x < width ; x++ ){
+    for ( var y = 0 ; y < self.height ; y++ ){
+      for ( var x = 0 ; x < self.width ; x++ ){
+        var index = (x + y * self.width)*4;
 
-        var index = (x + y * width)*4;
-
-        pixels[index]=random(24,255);
-        pixels[index+1]=random(250,255);      ;
-        pixels[index+2]=random(0,255);
-        pixels[index+3]=255;
 
       }
 
     }
-  updatePixels();
-  //saveCanvas(c, 'grand jaune','jpg');
+  self.updatePixels();
 
 }
 
 function draw(){
-
+  image(self,0,0);
 }
