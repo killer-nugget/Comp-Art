@@ -11,15 +11,15 @@ function setup(){
 
   for (var i = 0; i < 199; i++) {
 
-   doors.push(new Door(width/2,height/2,200-(i+2),300-(i+2),100,100,color(colorMap+i,33+i,0,colorMap-i)));
+   doors.push(new Door(width/2,height/2,200-(i+2),300-(i+2),100,100,color(colorMap-i,0,0)));
   }
 
 
   for (var i = 0; i < doors.length; i++) {
-    doors[i].display((width/2),(height/2));
+    doors[i].display((width/2)+i,(height/2)+(i*0.5));
   }
 
-saveCanvas(c, 'myCanvas', 'png');
+//saveCanvas(c, 'myCanvas', 'png');
 
 }
 
