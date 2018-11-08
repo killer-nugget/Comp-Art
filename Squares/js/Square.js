@@ -1,13 +1,14 @@
 
-function Square(x,y,size) {
+function Square(x,y,size,color) {
   this.x= x;
   this.y= y;
   this.size= size;
+  this.color= color;
 }
 
 Square.prototype.display= function () {
   rectMode(CENTER);
-  fill(random(255),random(255),random(255),255);
+  fill(this.color);
   noStroke();
   rect(this.x,this.y, this.size, this.size);
 
