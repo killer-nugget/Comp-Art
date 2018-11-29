@@ -9,8 +9,7 @@ function Door (x,y,w,h,tl,tr,color){
 }
 
 Door.prototype.display= function(mX,mY){
-   stroke(this.color);
-  //noStroke();
+  noStroke();
   fill(this.color);
   rectMode(CENTER);
   rect(mX,mY,this.w,this.h,this.tl,this.tr,0,0);
