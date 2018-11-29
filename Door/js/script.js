@@ -10,7 +10,7 @@ var c;
 function setup(){
   c =createCanvas(1200,3200);
   c;
-  //background(6,109,129); (blue and red)
+  //background(6,109,129); (blue and red) -- just in case i need it back.
   background(233,161,255);
  var colorMap=map(255,0,255,0,600);
 
